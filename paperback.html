@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paperback — 100 Essential Korean Sentence Patterns for Beginners</title>
+<!--
+  출간 후 할 일 (After the Amazon page is live):
+  1) AMAZON_URL 에 아마존 종이책 주소를 넣으세요.
+  2) 아래 <meta http-equiv="refresh"> 줄의 주석(<!- - - ->)을 풀고 같은 주소를 넣으세요.
+  그러면 이 페이지에 들어온 사람이 바로 아마존으로 이동해요.
+-->
+<!-- <meta http-equiv="refresh" content="0; url=AMAZON_URL"> -->
+<style>
+  :root { --ink:#2b2520; --accent:#b5452f; --bg:#faf6ef; }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+         background:var(--bg); color:var(--ink);
+         font-family:-apple-system, "Segoe UI", "Noto Sans KR", sans-serif; padding:24px; }
+  .card { max-width:460px; width:100%; background:#fff; border-radius:18px; padding:36px 28px;
+          box-shadow:0 6px 28px rgba(0,0,0,.08); text-align:center; }
+  .tag { display:inline-block; font-size:13px; letter-spacing:.08em; text-transform:uppercase;
+         color:var(--accent); font-weight:700; margin-bottom:12px; }
+  h1 { font-size:22px; line-height:1.35; margin:0 0 12px; }
+  p { font-size:16px; line-height:1.6; margin:0 0 20px; color:#5a524b; }
+  a.btn { display:inline-block; padding:13px 22px; border-radius:999px; text-decoration:none;
+          font-weight:700; font-size:15px; margin:6px; }
+  .primary { background:var(--accent); color:#fff; }
+  .ghost { border:2px solid var(--ink); color:var(--ink); }
+  .ko { font-size:14px; color:#8a817a; margin-top:18px; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="tag">Paperback · Coming soon</div>
+    <h1>100 Essential Korean Sentence Patterns for Beginners</h1>
+    <p>The print edition is on its way to Amazon.<br>
+       Large 8.5×11 pages for writing practice, plus a QR video lesson for every pattern.</p>
+    <a id="amazon" class="btn primary" href="#" hidden>Get the paperback on Amazon</a>
+    <a class="btn ghost" href="https://www.youtube.com/@02100korean?sub_confirmation=1">Subscribe on YouTube</a>
+    <div class="ko">종이책이 곧 아마존에 출간돼요. 유튜브를 구독하면 소식을 가장 먼저 받을 수 있어요.</div>
+  </main>
+<script>
+  // 출간 후 이 값만 바꾸면 버튼이 나타나요. 예: "https://www.amazon.com/dp/XXXXXXXXXX"
+  var AMAZON_URL = "";
+  if (AMAZON_URL) {
+    var a = document.getElementById("amazon");
+    a.href = AMAZON_URL; a.hidden = false;
+    document.querySelector(".tag").textContent = "Paperback · Available now";
+  }
+</script>
+</body>
+</html>
